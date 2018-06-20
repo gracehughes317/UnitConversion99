@@ -39,12 +39,12 @@
 
         <div class="row bottom">
             <div class="col-md-5">
-                <p class="units peach Georgia">Unit 1:</p>
+                <p class="units peach Georgia">Miles:</p>
                 <input v-model="input" v-on:input="convert"  class="inputs peach Calibri" />
             </div>
             <div class="col-md-2 sign peach Georgia">≈</div>
             <div class="col-md-5">
-                <p class="units peach Georgia">Unit 2:</p>
+                <p class="units peach Georgia">Kilometers:</p>
                 <input v-model="input2" v-on:input="convert2"  class="inputs peach Calibri" />
 
             </div>
@@ -65,7 +65,7 @@
         },
         methods: {
             convert: function () {
-                this.value1 = parseInt(this.input) * 1.60934;
+                this.value1 = parseFloat(this.input) * 1.60934;
                 this.input2 = Math.round(100 * this.value1) / 100;
                 if (isNaN(this.input2)) {
                     this.input = "";
@@ -73,7 +73,7 @@
                 }
             },
             convert2: function () {
-                this.value2 = parseInt(this.input2) / 1.60934;
+                this.value2 = parseFloat(this.input2) / 1.60934;
                 this.input = Math.round(100 * this.value2) / 100;
                 if (isNaN(this.input)) {
                     this.input2 = "";
