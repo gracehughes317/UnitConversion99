@@ -66,17 +66,21 @@
             link6: "",
             input: "",
             input2: "",
+            value1: "",
+            value2: "",
         },
         methods: {
             convert: function () {
-                this.input2 = parseInt(this.input) * 1.60934;
+                this.value1 = parseInt(this.input) * 1.60934;
+                this.input2 = Math.round(100 * this.value1) / 100;
                 if (isNaN(this.input2)) {
                     this.input = "";
                     this.input2 = "";
                 }
             },
             convert2: function () {
-                this.input = parseInt(this.input2) / 1.60934;
+                this.value2 = parseInt(this.input2) / 1.60934;
+                this.input = Math.round(100 * this.value2) / 100;
                 if (isNaN(this.input)) {
                     this.input2 = "";
                     this.input = "";
