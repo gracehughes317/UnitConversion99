@@ -19,34 +19,34 @@
         </div>
         <div class="top row georgia">
             <div class="col-md-2 ">
-                <input type="button" value="Cm/In" onclick="window.location.href='CmtoIn.html'" class="but peach" />
+                <a href="CmtoIn.html" class="btn btn-secondary">Cm to M</a>
             </div>
             <div class="col-md-2 ">
-                <input type="button" value="Dollars/Pounds" onclick="window.location.href='DollarsPounds.html'" class="but peach" />
+                <a href="DollarsPounds.html" class="btn btn-secondary">Dollars to Pounds</a>
             </div>
             <div class="col-md-2 ">
-                <input type="button" value="Watts/Horsepower" onclick="window.location.href='WattsHorsepower.html'" />
+                <a href="WattsHorsepower.html" class="btn btn-secondary">Watts to HP</a>
             </div>
             <div class="col-md-2 ">
-                <input type="button" value="Miles/Km" onclick="window.location.href='MilesKm.html'" />
+                <a href="MilesKm.html" class="btn btn-secondary">Miles to Km</a>
             </div>
             <div class="col-md-2 ">
-                <input type="button" value="Temp" onclick="window.location.href='FtoC.html'" />
+                <a href="FtoC.html" class="btn btn-secondary">F to C</a>
             </div>
             <div class="col-md-2 ">
-                <button v-on:click="link6" class="but peach">F° to C°</button>
+                <a href="CmtoIn.html" class="btn btn-secondary">Gallons to Litres</a>
             </div>
         </div>
 
         <div class="row bottom">
             <div class="col-md-5">
-                <p class="units peach Georgia">Dollars:</p>
-                <input v-model="input" v-on:input="toPounds" value="this.dollars" class="inputs peach Calibri" />
+                <p class="units peach Georgia">Pounds:</p>
+                <input v-model="dollars" v-on:input="toPounds" value="dollars" class="inputs peach Calibri" />
             </div>
             <div class="col-md-2 sign peach Georgia">≈</div>
             <div class="col-md-5">
-                <p class="units peach Georgia">Pounds:</p>
-                <input v-model="input2" v-on:input="toDollars" value="this.dollars" class="inputs peach Calibri" />
+                <p class="units peach Georgia">Dollars:</p>
+                <input v-model="pounds" v-on:input="toDollars" value="pounds" class="inputs peach Calibri" />
 
             </div>
         </div>
