@@ -8,3 +8,23 @@
 
 </body>
 </html>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            input: "",
+            input2: "",
+            Unit: "",
+            Unit2: "",
+        },
+        methods: {
+            convert: function () {
+                this.Unit2 = this.input * 1.60934;
+            },
+            convert2: function () {
+                this.Unit = this.input2 / 1.60934;
+            }
+        }
+    })
+</script>
