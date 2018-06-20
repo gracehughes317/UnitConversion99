@@ -3,27 +3,74 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <link href="OverallStyle.css" rel="stylesheet" />
 </head>
+
 <body>
-   <!--1 pound is 1.32m dollars -->
-   <!--1 dollar is 0.76 pounds-->
+    <div id="app">
 
+        <div class="top row georgia">
+            <div class="col-md-12">
+                <p class="one Calibri">Unit</p>
+                <hr>
+                <p class="two Calibri">Converter</p>
+            </div>
+        </div>
+        <div class="top row georgia">
+            <div class="col-md-2 ">
+                <input type="button" value="Cm/In" onclick="window.location.href='CmtoIn.html'" class="but peach" />
+            </div>
+            <div class="col-md-2 ">
+                <input type="button" value="Dollars/Pounds" onclick="window.location.href='DollarsPounds.html'" class="but peach" />
+            </div>
+            <div class="col-md-2 ">
+                <input type="button" value="Watts/Horsepower" onclick="window.location.href='WattsHorsepower.html'" />
+            </div>
+            <div class="col-md-2 ">
+                <input type="button" value="Miles/Km" onclick="window.location.href='MilesKm.html'" />
+            </div>
+            <div class="col-md-2 ">
+                <input type="button" value="Temp" onclick="window.location.href='FtoC.html'" />
+            </div>
+            <div class="col-md-2 ">
+                <button v-on:click="link6" class="but peach">F° to C°</button>
+            </div>
+        </div>
 
+        <div class="row bottom">
+            <div class="col-md-5">
+                <p class="units peach Georgia">Dollars:</p>
+                <input v-model="input" v-on:input="toPounds" value="this.dollars" class="inputs peach Calibri" />
+            </div>
+            <div class="col-md-2 sign peach Georgia">≈</div>
+            <div class="col-md-5">
+                <p class="units peach Georgia">Pounds:</p>
+                <input v-model="input2" v-on:input="toDollars" value="this.dollars" class="inputs peach Calibri" />
 
+            </div>
+        </div>
+    </div>
 </body>
+
+
 </html>
 <script src="https://unpkg.com/vue"></script>
 <script>
     var app = new Vue({
         el: '#app',
         data: {
-
+            output: "",
+            dollars: 0,
+            pounds: 0
         },
-
         methods: {
-
+            toDollars: function () {
+                this.dollars = this.pounds / 0.76;
+            },
+            toPounds: function () {
+                this.pounds = this.dollars * 0.76;
+            }
         }
-
     })
-    
 </script>
