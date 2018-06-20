@@ -28,10 +28,10 @@
         },
         methods: {
             toDollars: function () {
-                this.dollars = this.pounds * 0.76;
+                this.dollars = this.pounds / 0.76;
             },
             toPounds: function () {
-                this.pounds = this.dollars / 0.76;
+                this.pounds = this.dollars * 0.76;
             }
         }
     })
