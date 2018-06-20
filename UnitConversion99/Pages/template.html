@@ -1,10 +1,10 @@
 <html>
 <head>
-    <link href="Pages/bootstrap.css" rel="stylesheet" />
+    <link href="bootstrap.css" rel="stylesheet"/>
 </head>
     <body>
         <div id="app">
-            <div class="row">
+            
                 <div class="row">
                     <h1>Unit Converter</h1>
                 </div>
@@ -16,12 +16,12 @@
                     <div class="col-md-2"><button v-on:click="link5">Unit</button></div>
                     <div class="col-md-2"><button v-on:click="link6">Unit</button></div>
                 </div>
-            </div>
+            
             <div class="row">
                 <div class="row">
-                    <div class="col-md-5"><input v-model="input" v-on:input="convert" /></div>
-                    <div class="col-md-2"><button v-on:click="switch">~</button></div>
-                    <div class="col-md-5"></div>
+                    <div class="col-md-5"><input v-model="input" v-on:input="convert" value="Unit"/></div>
+                    <div class="col-md-2">~</div>
+                    <div class="col-md-5"><input v-model="input2" v-on:input="convert2" value="Unit" /></div>
                 </div>
                 <div class="row">
                 </div>
