@@ -3,8 +3,74 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <link href="OverallStyle.css" rel="stylesheet" />
 </head>
+
 <body>
-   asdfghjkl
+    <div id="app">
+
+        <div class="top row georgia">
+            <div class="col-md-12">
+                <p class="one Calibri">Unit</p>
+                <hr>
+                <p class="two Calibri">Converter</p>
+            </div>
+        </div>
+        <div class="top row georgia">
+            <div class="col-md-2 ">
+                <a href="CmtoIn.html" class="btn btn-secondary">Cm to M</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="DollarsPounds.html" class="btn btn-secondary">Dollars to Pounds</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="WattsHorsepower.html" class="btn btn-secondary">Watts to HP</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="MilesKm.html" class="btn btn-secondary">Miles to Km</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="FtoC.html" class="btn btn-secondary">F to C</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="CmtoIn.html" class="btn btn-secondary">Gallons to Litres</a>
+            </div>
+        </div>
+
+        <div class="row bottom">
+            <div class="col-md-5">
+                <p class="units peach Georgia">Pounds:</p>
+                <input v-model="dollars" v-on:input="toPounds" value="dollars" class="inputs peach Calibri" />
+            </div>
+            <div class="col-md-2 sign peach Georgia">≈</div>
+            <div class="col-md-5">
+                <p class="units peach Georgia">Dollars:</p>
+                <input v-model="pounds" v-on:input="toDollars" value="pounds" class="inputs peach Calibri" />
+
+            </div>
+        </div>
+    </div>
 </body>
+
+
 </html>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            output: "",
+            dollars: 0,
+            pounds: 0
+        },
+        methods: {
+            toDollars: function () {
+                this.dollars = this.pounds / 0.76;
+            },
+            toPounds: function () {
+                this.pounds = this.dollars * 0.76;
+            }
+        }
+    })
+</script>
