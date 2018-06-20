@@ -1,10 +1,85 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
 
+<head>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <link href="OverallStyle.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="app">
+
+        <div class="top row georgia">
+            <div class="col-md-12">
+                <p class="one Calibri">Unit</p>
+                <hr>
+                <p class="two Calibri">Converter</p>
+            </div>
+        </div>
+        <div class="top row georgia">
+            <div class="col-md-2 ">
+                <a href="CmtoIn.html" class="btn btn-secondary but peach">Cm to M</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="DollarsPounds.html" class="btn btn-secondary but peach">Dollars to Pounds</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="WattsHorsepower.html" class="btn btn-secondary but peach">Watts to HP</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="MilesKm.html" class="btn btn-secondary but peach">Miles to Km</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="FtoC.html" class="btn btn-secondary but peach">F to C</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="CmtoIn.html" class="btn btn-secondary but peach">Gallons to Litres</a>
+            </div>
+        </div>
+
+        <div class="row bottom">
+            <div class="col-md-5">
+                <p class="units peach Georgia">Miles:</p>
+                <input v-model="input" v-on:input="convert"  class="inputs peach Calibri" />
+            </div>
+            <div class="col-md-2 sign peach Georgia">≈</div>
+            <div class="col-md-5">
+                <p class="units peach Georgia">Kilometers:</p>
+                <input v-model="input2" v-on:input="convert2"  class="inputs peach Calibri" />
+
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            input: "",
+            input2: "",
+            value1: "",
+            value2: "",
+        },
+        methods: {
+            convert: function () {
+                this.value1 = parseFloat(this.input) * 1.60934;
+                this.input2 = Math.round(100 * this.value1) / 100;
+                if (isNaN(this.input2)) {
+                    this.input = "";
+                    this.input2 = "";
+                }
+            },
+            convert2: function () {
+                this.value2 = parseFloat(this.input2) / 1.60934;
+                this.input = Math.round(100 * this.value2) / 100;
+                if (isNaN(this.input)) {
+                    this.input2 = "";
+                    this.input = "";
+                }
+            }
+        }
+    })
+</script>
