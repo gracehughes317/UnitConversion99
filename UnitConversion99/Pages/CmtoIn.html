@@ -70,7 +70,7 @@
         },
         methods: {
             CmToIn: function () {
-                this.value1 = (parseInt(this.inputCm) / 2.54);
+                this.value1 = (parseFloat(this.inputCm) / 2.54);
                 this.inputIn = Math.round(100 * this.value1) / 100;
                 if (isNaN(this.inputIn)) {
                     this.inputCm = "";
@@ -79,7 +79,7 @@
 
             },
             InToCm: function () {
-                this.value2 = (parseInt(this.inputIn) * 2.54);
+                this.value2 = (parseFloat(this.inputIn) * 2.54);
                 this.inputCm = Math.round(100 * this.value2) / 100;
                 if (isNaN(this.inputCm)) {
                     this.inputCm = "";
