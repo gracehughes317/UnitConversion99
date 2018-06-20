@@ -1,0 +1,72 @@
+﻿<html>
+
+<head>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <link href="OverallStyle.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="app">
+
+        <div class="top row georgia">
+            <div class="col-md-12">
+                <p class="one Calibri">Unit</p>
+                <hr>
+                <p class="two Calibri">Converter</p>
+            </div>
+        </div>
+        <div class="top row georgia">
+            <div class="col-md-2 ">
+                <a href="CmtoIn.html" class="btn btn-secondary">Cm to M</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="DollarsPounds.html" class="btn btn-secondary">Dollars to Pounds</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="WattsHorsepower.html" class="btn btn-secondary">Watts to HP</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="MilesKm.html" class="btn btn-secondary">Miles to Km</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="FtoC.html" class="btn btn-secondary">F to C</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="GallonsLiters.html" class="btn btn-secondary">Gallons to Liters</a>
+            </div>
+        </div>
+
+        <div class="row bottom">
+            <div class="col-md-5">
+                <p class="units peach Georgia">Gallons:</p>
+                <input v-model="gallons" v-on:input="toLiters" value="Unit" class="inputs peach Calibri" />
+            </div>
+            <div class="col-md-2 sign peach Georgia">≈</div>
+            <div class="col-md-5">
+                <p class="units peach Georgia">Liters:</p>
+                <input v-model="liters" v-on:input="toGallons" value="Unit" class="inputs peach Calibri" />
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            gallons: 0,
+            liters: 0
+        },
+        methods: {
+            toLiters: function () {
+                this.liters = this.gallons * 3.78541;
+            },
+            toGallons: function () {
+                this.gallons = this.liters / 3.78541;
+            }
+        }
+    })
+</script>
