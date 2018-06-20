@@ -5,6 +5,34 @@
     <title></title>
 </head>
 <body>
-
+    <div id="app">
+        <div class="unit">
+            Watts
+            <input v-model="watts" v-on:input="toHorse" /> W
+        </div>
+        <div class="unit">
+            Horsepower
+            <input v-model="horsepower" v-on:input="toWatts" /> hp
+        </div>
+    </div>
 </body>
 </html>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            output: "",
+            watts: 0,
+            horsepower: 0
+        },
+        methods: {
+            toWatts: function () {
+                this.watts = this.horsepower * 745.699872;
+            },
+            toHorse: function () {
+                this.horsepower = this.watts / 745.699872;
+            }
+        }
+    })
+</script>
