@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Gallons to Liters</title>
+</head>
+<body>
+
+    <div id="app">
+        <input v-model="gallons" v-on:input="toLiters">
+        <input v-model="liters" v-on:input="toGallons">
+        <p>Gallons: {{ gallons }}</p>
+        <p>Liters: {{ liters }}</p>
+    </div>
+
+</body>
+</html>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            gallons: 0,
+            liters: 0
+        },
+        methods: {
+            toLiters: function () {
+                this.liters = this.gallons * 3.78541;
+            },
+            toGallons: function () {
+                this.gallons = this.liters / 3.78541;
+            }
+        }
+    })
+</script>
