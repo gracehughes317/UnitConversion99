@@ -1,10 +1,35 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href="OverallStyle.css" rel="stylesheet">
     <meta charset="utf-8" />
     <title></title>
 </head>
 <body>
-
+    <div id="app">
+        <input v-model="inputCm" v-on:input="CmToIn">
+        <input v-model="inputIn" v-on:input="InToCm">
+        <p>Centimeter = {{ inputCm }}</p>
+        <p>Inches = {{ inputIn }}</p>
+    </div>
 </body>
 </html>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            inputCm: 0.0,
+            inputIn: 0.0
+        },
+        methods: {
+            CmToIn: function () {
+                this.inputIn = (this.inputCm / 2.54);
+            },
+            InToCm: function () {
+                this.inputCm = (this.inputIn * 2.54);
+            }
+        }
+    })
+</script>
