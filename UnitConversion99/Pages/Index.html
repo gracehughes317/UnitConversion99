@@ -7,13 +7,50 @@
     <title>Home</title>
 </head>
 <body>
-    
+    <div id="app">
 
-    <input type="button"  value="Dollars/Pounds" onclick="window.location.href='DollarsPounds.html'" />
-    <input type="button"  value="Cm/In" onclick="window.location.href='CmtoIn.html'" />
-    <input type="button"  value="Miles/Km" onclick="window.location.href='MilesKm.html'" />
-    <input type="button"  value="Watts/Horsepower" onclick="window.location.href='WattsHorsepower.html'" />
-    <input type="button"  value="Temp" onclick="window.location.href='FtoC.html'" />
+        <div class="top row georgia">
+            <div class="col-md-12">
+                <p class="one Calibri">Unit</p>
+                <hr>
+                <p class="two Calibri">Converter</p>
+            </div>
+        </div>
+        <div class="top row georgia">
+            <div class="col-md-2 ">
+                <a href="CmtoIn.html" class="btn btn-secondary">Cm to M</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="DollarsPounds.html" class="btn btn-secondary">Dollars to Pounds</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="WattsHorsepower.html" class="btn btn-secondary">Watts to HP</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="MilesKm.html" class="btn btn-secondary">Miles to Km</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="FtoC.html" class="btn btn-secondary">F to C</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="CmtoIn.html" class="btn btn-secondary">Gallons to Litres</a>
+            </div>
+        </div>
+
+        <div class="row bottom">
+            <div class="col-md-5">
+                <p class="units peach Georgia">Unit 1:</p>
+                <input v-model="input" v-on:input="convert" value="Unit" class="inputs peach Calibri" />
+            </div>
+            <div class="col-md-2 sign peach Georgia">≈</div>
+            <div class="col-md-5">
+                <p class="units peach Georgia">Unit 2:</p>
+                <input v-model="input2" v-on:input="convert2" value="Unit" class="inputs peach Calibri" />
+
+            </div>
+        </div>
+    </div>
+
 
 </body>
-</html>
+</html> 
