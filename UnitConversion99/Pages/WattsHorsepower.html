@@ -1,18 +1,53 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <link href="OverallStyle.css" rel="stylesheet" />
 </head>
+
 <body>
     <div id="app">
-        <div class="unit">
-            Watts
-            <input v-model="watts" v-on:input="toHorse" /> W
+
+        <div class="top row georgia">
+            <div class="col-md-12">
+                <p class="one Calibri">Unit</p>
+                <hr>
+                <p class="two Calibri">Converter</p>
+            </div>
         </div>
-        <div class="unit">
-            Horsepower
-            <input v-model="horsepower" v-on:input="toWatts" /> hp
+        <div class="top row georgia">
+            <div class="col-md-2 ">
+                <a href="CmtoIn.html" class="btn btn-secondary">Cm to M</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="DollarsPounds.html" class="btn btn-secondary">Dollars to Pounds</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="WattsHorsepower.html" class="btn btn-secondary">Watts to HP</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="MilesKm.html" class="btn btn-secondary">Miles to Km</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="FtoC.html" class="btn btn-secondary">F to C</a>
+            </div>
+            <div class="col-md-2 ">
+                <a href="CmtoIn.html" class="btn btn-secondary">Gallons to Litres</a>
+            </div>
+        </div>
+
+        <div class="row bottom">
+            <div class="col-md-5">
+                <p class="units peach Georgia">Watts:</p>
+                <input v-model="watts" v-on:input="toHorse" value="watts" class="inputs peach Calibri" />
+            </div>
+            <div class="col-md-2 sign peach Georgia">≈</div>
+            <div class="col-md-5">
+                <p class="units peach Georgia">Horsepower:</p>
+                <input v-model="horsepower" v-on:input="toWatts" value="horsepower" class="inputs peach Calibri" />
+
+            </div>
         </div>
     </div>
 </body>
