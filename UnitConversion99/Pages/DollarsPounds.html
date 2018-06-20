@@ -1,11 +1,12 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8" />
+    <title></title>
     <link href="bootstrap.css" rel="stylesheet" />
     <link href="OverallStyle.css" rel="stylesheet" />
-    <meta charset="utf-8" />
-    <title>Home</title>
 </head>
+
 <body>
     <div id="app">
 
@@ -39,18 +40,37 @@
 
         <div class="row bottom">
             <div class="col-md-5">
-                <p class="units peach Georgia">Unit 1:</p>
-                <input v-model="input" v-on:input="convert" value="Unit" class="inputs peach Calibri" />
+                <p class="units peach Georgia">Pounds:</p>
+                <input v-model="dollars" v-on:input="toPounds" value="dollars" class="inputs peach Calibri" />
             </div>
             <div class="col-md-2 sign peach Georgia">≈</div>
             <div class="col-md-5">
-                <p class="units peach Georgia">Unit 2:</p>
-                <input v-model="input2" v-on:input="convert2" value="Unit" class="inputs peach Calibri" />
+                <p class="units peach Georgia">Dollars:</p>
+                <input v-model="pounds" v-on:input="toDollars" value="pounds" class="inputs peach Calibri" />
 
             </div>
         </div>
     </div>
-
-
 </body>
-</html> 
+
+
+</html>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            output: "",
+            dollars: 0,
+            pounds: 0
+        },
+        methods: {
+            toDollars: function () {
+                this.dollars = this.pounds / 0.76;
+            },
+            toPounds: function () {
+                this.pounds = this.dollars * 0.76;
+            }
+        }
+    })
+</script>
