@@ -7,7 +7,49 @@
     <title>Home</title>
 </head>
 <body>
-    
+    <div id="app">
+
+        <div class="top row georgia">
+            <div class="col-md-12">
+                <p class="one Calibri">Unit</p>
+                <hr>
+                <p class="two Calibri">Converter</p>
+            </div>
+        </div>
+        <div class="top row georgia">
+            <div class="col-md-2 ">
+                <button onclick="window.location.href='DollarsPounds.html' "class="but peach">Cm to In</button>
+            </div>
+            <div class="col-md-2 ">
+                <button v-on:click="link2"  class="but peach">W to Hp</button>
+            </div>
+            <div class="col-md-2 ">
+                <button v-on:click="link3" class="but peach">L to Gal</button>
+            </div>
+            <div class="col-md-2 ">
+                <button v-on:click="link4" class="but peach">Mi to Km</button>
+            </div>
+            <div class="col-md-2 ">
+                <button v-on:click="link5" class="but peach">$ to £</button>
+            </div>
+            <div class="col-md-2 ">
+                <button v-on:click="link6" class="but peach">F° to C°</button>
+            </div>
+        </div>
+
+        <div class="row bottom">
+            <div class="col-md-5">
+                <p class="units peach Georgia">Unit 1:</p>
+                <input v-model="input" v-on:input="convert" value="Unit" class="inputs peach Calibri" />
+            </div>
+            <div class="col-md-2 sign peach Georgia">≈</div>
+            <div class="col-md-5">
+                <p class="units peach Georgia">Unit 2:</p>
+                <input v-model="input2" v-on:input="convert2" value="Unit" class="inputs peach Calibri" />
+
+            </div>
+        </div>
+    </div>
 
     <input type="button"  value="Dollars/Pounds" onclick="window.location.href='DollarsPounds.html'" />
     <input type="button"  value="Cm/In" onclick="window.location.href='CmtoIn.html'" />
