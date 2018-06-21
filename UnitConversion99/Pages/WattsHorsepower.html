@@ -1,5 +1,4 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<html>
 
 <head>
     <link href="bootstrap.css" rel="stylesheet" />
@@ -18,40 +17,40 @@
         </div>
         <div class="top row georgia">
             <div class="col-md-2 ">
-                <a href="CmtoIn.html" class="btn btn-secondary">Cm to M</a>
+                <a href="CmtoIn.html" class="btn btn-secondary but peach but peach">Cm to In</a>
             </div>
             <div class="col-md-2 ">
-                <a href="DollarsPounds.html" class="btn btn-secondary">Dollars to Pounds</a>
+                <a href="DollarsPounds.html" class="btn btn-secondary but peach">Dollars to Pounds</a>
             </div>
             <div class="col-md-2 ">
-                <a href="WattsHorsepower.html" class="btn btn-secondary">Watts to HP</a>
+                <a href="WattsHorsepower.html" class="btn btn-secondary but peach">Watts to HP</a>
             </div>
             <div class="col-md-2 ">
-                <a href="MilesKm.html" class="btn btn-secondary">Miles to Km</a>
+                <a href="MilesKm.html" class="btn btn-secondary but peach">Miles to Km</a>
             </div>
             <div class="col-md-2 ">
-                <a href="FtoC.html" class="btn btn-secondary">F to C</a>
+                <a href="FtoC.html" class="btn btn-secondary but peach">F to C</a>
             </div>
             <div class="col-md-2 ">
-                <a href="GallonsLiters.html" class="btn btn-secondary">Gallons to Litres</a>
+                <a href="GallonsLiters.html" class="btn btn-secondary but peach">Gallons to Litres</a>
             </div>
         </div>
 
         <div class="row bottom">
             <div class="col-md-5">
                 <p class="units peach Georgia">Watts:</p>
-                <input v-model="watts" v-on:input="toHorse" value="watts" class="inputs peach Calibri" />
+                <input v-model="watts" v-on:input="toHorse" class="inputs peach Calibri" />
             </div>
             <div class="col-md-2 sign peach Georgia">≈</div>
             <div class="col-md-5">
                 <p class="units peach Georgia">Horsepower:</p>
-                <input v-model="horsepower" v-on:input="toWatts" value="horsepower" class="inputs peach Calibri" />
+                <input v-model="horsepower" v-on:input="toWatts" class="inputs peach Calibri" />
 
             </div>
         </div>
     </div>
 </body>
-</html>
+
 <script src="https://unpkg.com/vue"></script>
 <script>
     var app = new Vue({

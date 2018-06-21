@@ -1,5 +1,4 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<html>
 
 <head>
     <link href="bootstrap.css" rel="stylesheet" />
@@ -18,7 +17,7 @@
         </div>
         <div class="top row georgia">
             <div class="col-md-2 ">
-                <a href="CmtoIn.html" class="btn btn-secondary but peach">Cm to M</a>
+                <a href="CmtoIn.html" class="btn btn-secondary but peach but peach">Cm to In</a>
             </div>
             <div class="col-md-2 ">
                 <a href="DollarsPounds.html" class="btn btn-secondary but peach">Dollars to Pounds</a>
@@ -40,26 +39,25 @@
         <div class="row bottom">
             <div class="col-md-5">
                 <p class="units peach Georgia">Miles:</p>
-                <input v-model="input" v-on:input="convert"  class="inputs peach Calibri" />
+                <input v-model="input" v-on:input="convert" class="inputs peach Calibri" />
             </div>
             <div class="col-md-2 sign peach Georgia">≈</div>
             <div class="col-md-5">
                 <p class="units peach Georgia">Kilometers:</p>
-                <input v-model="input2" v-on:input="convert2"  class="inputs peach Calibri" />
+                <input v-model="input2" v-on:input="convert2" class="inputs peach Calibri" />
 
             </div>
         </div>
     </div>
 </body>
 
-</html>
 <script src="https://unpkg.com/vue"></script>
 <script>
     var app = new Vue({
         el: '#app',
         data: {
-            input: "",
-            input2: "",
+            input: 0.0,
+            input2: 0.0,
             value1: "",
             value2: "",
         },
