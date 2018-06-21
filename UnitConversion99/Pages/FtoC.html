@@ -62,9 +62,17 @@
         methods: {
             FtoC: function () {
                 this.inputC = (this.inputF - 32) * 0.5556;
+                if (isNaN(this.inputC)) {
+                    this.inputC = "";
+                    this.inputF = "";
+                }
             },
             CtoF: function () {
                 this.inputF = (this.inputC * 1.8) + 32;
+                if (isNaN(this.inputF)) {
+                    this.inputF = "";
+                    this.inputC = "";
+                }
             }
         }
     })

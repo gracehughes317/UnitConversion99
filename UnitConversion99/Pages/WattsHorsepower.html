@@ -64,9 +64,17 @@
         methods: {
             toWatts: function () {
                 this.watts = this.horsepower * 745.699872;
+                if (isNaN(this.watts)) {
+                    this.watts = "";
+                    this.horsepower = "";
+                }
             },
             toHorse: function () {
                 this.horsepower = this.watts / 745.699872;
+                if (isNaN(this.horsepower)) {
+                    this.watts = "";
+                    this.horsepower = "";
+                }
             }
         }
     })

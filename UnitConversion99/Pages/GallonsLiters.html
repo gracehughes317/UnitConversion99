@@ -63,9 +63,17 @@
         methods: {
             toLiters: function () {
                 this.liters = this.gallons * 3.78541;
+                if (isNaN(this.liters)) {
+                    this.liters = "";
+                    this.gallons = "";
+                }
             },
             toGallons: function () {
                 this.gallons = this.liters / 3.78541;
+                if (isNaN(this.gallons)) {
+                    this.gallons = "";
+                    this.liters = "";
+                }
             }
         }
     })

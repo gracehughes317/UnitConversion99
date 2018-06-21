@@ -67,9 +67,17 @@
         methods: {
             toDollars: function () {
                 this.dollars = this.pounds / 0.76;
+                if (isNaN(this.dollars)) {
+                    this.dollars = "";
+                    this.pounds = "";
+                }
             },
             toPounds: function () {
                 this.pounds = this.dollars * 0.76;
+                if (isNaN(this.pounds)) {
+                    this.pounds = "";
+                    this.dollars = "";
+                }
             }
         }
     })
